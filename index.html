@@ -1,0 +1,749 @@
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DesiKart - Authentic Indian E-Commerce</title>
+    <meta name="description" content="Experience the vibrance of India with DesiKart: festive ethnic wear, Ayurvedic wellness, handicrafts, spices, electronics, and authentic Indian products delivered Pan-India." />
+    <meta property="og:title" content="DesiKart - Authentic Indian E-Commerce" />
+    <meta property="og:description" content="Experience the vibrance of India with DesiKart: festive ethnic wear, Ayurvedic wellness, handicrafts, spices, electronics, and authentic Indian products delivered Pan-India." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Poppins, Outfit, Rozha One -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Rozha+One&display=swap" rel="stylesheet" />
+
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Application Stylesheet -->
+    <link rel="stylesheet" href="/client/css/style.css" />
+  </head>
+  <body>
+    <!-- Preloader Animation -->
+    <div id="preloader">
+      <div class="preloader-emblem">
+        <div class="preloader-spin-ring"></div>
+        <div class="preloader-icon">🪔</div>
+      </div>
+      <h1 class="preloader-title">DesiKart</h1>
+      <p class="preloader-sub">Pavitra • Shuddh • Desi</p>
+    </div>
+
+    <!-- Top Announcement Strip -->
+    <div class="top-strip">
+      <div class="container top-strip-inner">
+        <div class="top-strip-left">
+          <span class="badge-festive"><i class="fa-solid fa-sparkles"></i> DIWALI DHAMAKA SALE</span>
+          <span data-en="Flat 20% OFF on Orders above ₹1,999 with code FESTIVE20" data-hi="कोड FESTIVE20 के साथ ₹1,999 से अधिक के ऑर्डर पर 20% की छूट">
+            Flat 20% OFF on Orders above ₹1,999 with code <strong>FESTIVE20</strong>
+          </span>
+        </div>
+        <div class="top-strip-right">
+          <span class="top-strip-link"><i class="fa-solid fa-truck-fast"></i> Free Pan-India Delivery above ₹499</span>
+          <button id="lang-toggle-btn" class="btn btn-sm btn-outline" style="padding: 2px 8px; font-size: 0.72rem; color: #fff; border-color: rgba(255,255,255,0.3);">
+            हिन्दी
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <!-- Brand Logo -->
+        <a href="#home" class="brand-logo">
+          <div class="brand-symbol">
+            <i class="fa-solid fa-om"></i>
+          </div>
+          <div>
+            <div class="brand-name">DesiKart</div>
+            <div class="brand-tag">Pan-India Artisans</div>
+          </div>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="nav-search">
+          <i class="fa-solid fa-magnifying-glass nav-search-icon"></i>
+          <input type="text" id="nav-search-input" class="nav-search-input" placeholder="Search kurtas, saffron, brass urlis, spices..." />
+        </div>
+
+        <!-- Navigation Links -->
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active" data-en="Home" data-hi="होम">Home</a></li>
+            <li><a href="#products" class="nav-link" data-en="Catalogue" data-hi="दुकान">Catalogue</a></li>
+            <li><a href="#orders" class="nav-link" data-en="My Orders" data-hi="मेरे ऑर्डर">My Orders</a></li>
+          </ul>
+        </nav>
+
+        <!-- Nav Action Buttons -->
+        <div class="nav-actions">
+          <!-- Dark Mode Toggle -->
+          <button class="icon-btn" id="theme-toggle-btn" title="Toggle Dark/Light Mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+          <!-- Wishlist Button -->
+          <a href="#wishlist" class="icon-btn" title="My Wishlist">
+            <i class="fa-regular fa-heart"></i>
+            <span class="badge-count wishlist-count-badge">0</span>
+          </a>
+
+          <!-- Cart Drawer Button -->
+          <button class="icon-btn" id="nav-cart-btn" title="View Shopping Cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="badge-count cart-count-badge">0</span>
+          </button>
+
+          <!-- User Menu Button -->
+          <button class="user-menu-btn" id="nav-user-btn">
+            <i class="fa-solid fa-user"></i>
+            <span>Login</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="menu-toggle" id="btn-mobile-menu" aria-label="Open Mobile Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN APP VIEWS CONTAINER -->
+    <main id="app-viewport">
+      <!-- 1. HOME VIEW -->
+      <section id="home-view">
+        <!-- Hero Section -->
+        <div class="hero">
+          <div class="container hero-grid">
+            <div class="hero-content">
+              <span class="hero-tag">
+                <i class="fa-solid fa-fire-flame-curved"></i> Made in India • Handcrafted Heritage
+              </span>
+              <h1 class="hero-title">
+                The Soul of <span class="highlight-festive">Bharat</span> Delivered to Your Doorstep.
+              </h1>
+              <p class="hero-desc">
+                From handwoven Kanjeevaram silks and pure Kashmiri Kesar to Moradabad brassware and Make in India tech—explore India’s finest traditions with verified authentic quality.
+              </p>
+              <div class="hero-cta-group">
+                <a href="#products" class="btn btn-primary btn-lg">
+                  Explore Festive Collection <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#products" class="btn btn-outline btn-lg" onclick="document.getElementById('catalog-sort-select').value='discount';">
+                  View Diwali Deals 🔥
+                </a>
+              </div>
+              <div class="hero-trust-badges">
+                <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> 100% Genuine Certified</div>
+                <div class="trust-item"><i class="fa-solid fa-indian-rupee-sign"></i> Cash on Delivery</div>
+                <div class="trust-item"><i class="fa-solid fa-rotate-left"></i> 7-Day Easy Returns</div>
+              </div>
+            </div>
+
+            <!-- Hero Visual Showcase -->
+            <div class="hero-visual">
+              <div class="hero-card-stack">
+                <div class="hero-main-card">
+                  <span class="hero-badge-float">★ 4.9 Top Rated</span>
+                  <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" alt="Pure Kanjeevaram Silk" class="hero-main-img" />
+                  <div class="hero-card-overlay">
+                    <h3 style="font-size: 1.25rem; font-weight: 700;">Pure Kanjeevaram Silk Saree</h3>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">Handwoven Korvai Gold Zari • Kanchipuram</p>
+                  </div>
+                </div>
+                <div class="floating-stat-card">
+                  <div class="stat-icon"><i class="fa-solid fa-heart"></i></div>
+                  <div>
+                    <strong style="font-size: 1.1rem; display: block; color: var(--text-main);">50,000+</strong>
+                    <span style="font-size: 0.78rem; color: var(--text-muted);">Happy Indian Families</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Animated Marquee Strip -->
+        <div class="marquee-strip">
+          <div class="marquee-content">
+            <span class="marquee-item"><span class="diya">🪔</span> DIWALI MAHOTSAV SALE ACTIVE</span>
+            <span class="marquee-item">• 100% PURE KASHMIRI MONGRA KESAR</span>
+            <span class="marquee-item"><span class="diya">🪔</span> AUTHENTIC LUCKNOWI CHIKANKARI</span>
+            <span class="marquee-item">• DIRECT-FROM-WEAVER KANJEEVARAM SILKS</span>
+            <span class="marquee-item"><span class="diya">🪔</span> MORADABAD HAND-ENGRAVED BRASS URLIS</span>
+            <span class="marquee-item">• PAN-INDIA SPEED DELIVERY WITHIN 3-5 DAYS</span>
+            <span class="marquee-item"><span class="diya">🪔</span> SAFE CASH ON DELIVERY & UPI ACCEPTED</span>
+            <!-- Duplicated for seamless loop -->
+            <span class="marquee-item"><span class="diya">🪔</span> DIWALI MAHOTSAV SALE ACTIVE</span>
+            <span class="marquee-item">• 100% PURE KASHMIRI MONGRA KESAR</span>
+            <span class="marquee-item"><span class="diya">🪔</span> AUTHENTIC LUCKNOWI CHIKANKARI</span>
+            <span class="marquee-item">• DIRECT-FROM-WEAVER KANJEEVARAM SILKS</span>
+            <span class="marquee-item"><span class="diya">🪔</span> MORADABAD HAND-ENGRAVED BRASS URLIS</span>
+            <span class="marquee-item">• PAN-INDIA SPEED DELIVERY WITHIN 3-5 DAYS</span>
+          </div>
+        </div>
+
+        <!-- Categories Browse Section -->
+        <div class="categories-section">
+          <div class="container">
+            <div class="section-header">
+              <div>
+                <span class="section-subtitle">Curated Categories</span>
+                <h2 class="section-title">Shop by Indian Tradition</h2>
+                <p class="section-desc">Handcrafted with ancestral pride across regions of Bharat</p>
+              </div>
+              <a href="#products" class="btn btn-outline btn-sm">View All Items</a>
+            </div>
+            <div class="category-pills" id="category-pills-container">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Products Showcase -->
+        <div class="products-section" style="padding-top: 0;">
+          <div class="container">
+            <div class="section-header">
+              <div>
+                <span class="section-subtitle">Festive Highlights</span>
+                <h2 class="section-title">Trending Across India</h2>
+                <p class="section-desc">Most loved picks in festive sarees, wellness, dry fruits & electronics</p>
+              </div>
+              <a href="#products" class="btn btn-outline btn-sm">Explore All</a>
+            </div>
+            <div class="products-grid" id="featured-products-container">
+              <!-- Populated by catalog.renderFeaturedSection() -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Storytelling & Value Propositions -->
+        <div class="story-section">
+          <div class="container">
+            <div class="section-header" style="text-align: center; justify-content: center;">
+              <div>
+                <span class="section-subtitle">Why DesiKart</span>
+                <h2 class="section-title">Rooted in Authenticity & Trust</h2>
+              </div>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-icon"><i class="fa-solid fa-hands-holding"></i></div>
+                <h3 class="story-title">Direct from Master Karigars</h3>
+                <p class="story-text">We bypass multiple middlemen so weavers and artisans in Kashmir, Varanasi, and Kanchipuram receive fair wages directly.</p>
+              </div>
+              <div class="story-card">
+                <div class="story-icon"><i class="fa-solid fa-leaf"></i></div>
+                <h3 class="story-title">100% Purity Guarantee</h3>
+                <p class="story-text">From Silk Mark certified weaves to NABL lab-tested Shilajit and NMR-tested raw forest honey, quality is non-negotiable.</p>
+              </div>
+              <div class="story-card">
+                <div class="story-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <h3 class="story-title">Pan-India Express Logistics</h3>
+                <p class="story-text">Delivering to over 19,000 PIN codes across metro cities, tier-2, and tier-3 towns via BlueDart, Delhivery, and India Post.</p>
+              </div>
+              <div class="story-card">
+                <div class="story-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <h3 class="story-title">Vocal for Local Pride</h3>
+                <p class="story-text">Supporting the Make in India initiative, GI-tagged crafts, and traditional indigenous wellness sciences of Ayurveda.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metrics Counters Section -->
+        <div class="metrics-section">
+          <div class="container">
+            <div class="metrics-grid">
+              <div>
+                <div class="metric-num counter-num" data-target="50000" data-suffix="+">50,000+</div>
+                <div class="metric-label">Happy Indian Shoppers</div>
+              </div>
+              <div>
+                <div class="metric-num counter-num" data-target="1200" data-suffix="+">1,200+</div>
+                <div class="metric-label">Artisans & Karigars</div>
+              </div>
+              <div>
+                <div class="metric-num counter-num" data-target="500" data-suffix="+">500+</div>
+                <div class="metric-label">Cities & Towns Delivered</div>
+              </div>
+              <div>
+                <div class="metric-num counter-num" data-target="100" data-suffix="%">100%</div>
+                <div class="metric-label">Pure & Authentic Verified</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Customer Testimonials Section -->
+        <div class="testimonials-section">
+          <div class="container">
+            <div class="section-header">
+              <div>
+                <span class="section-subtitle">Real Experiences</span>
+                <h2 class="section-title">Loved by Shoppers Across Bharat</h2>
+                <p class="section-desc">Hear what verified buyers from Mumbai to Kolkata have to say</p>
+              </div>
+            </div>
+            <div class="products-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Ordered the Pure Kanjeevaram Saree for my mother’s 60th birthday. The golden zari and weight of the silk took our breath away. Arrived in Mumbai within 3 days!"</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">A</div>
+                  <div>
+                    <div class="author-name">Aarav Mehta</div>
+                    <div class="author-city">Worli, Mumbai</div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"The Pampore Kashmiri Kesar is 100% genuine Mongra. Just two strands give rich golden color to badam milk. DesiKart packaging with glass vial was top notch!"</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">P</div>
+                  <div>
+                    <div class="author-name">Priya Nair</div>
+                    <div class="author-city">Whitefield, Bengaluru</div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"The Moradabad Brass Urli set added so much festive grace to our Diwali puja. Heavy solid brass with dancing peacock work. Truly proud of Indian karigari!"</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">S</div>
+                  <div>
+                    <div class="author-name">Sneha Kulkarni</div>
+                    <div class="author-city">Kothrud, Pune</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. PRODUCTS CATALOGUE VIEW -->
+      <section id="products-view" style="display: none;">
+        <div class="container" style="padding-top: 30px; padding-bottom: 70px;">
+          <!-- Search Bar within Catalogue -->
+          <div style="margin-bottom: 24px;">
+            <div class="nav-search" style="max-width: 100%; display: block;">
+              <i class="fa-solid fa-magnifying-glass nav-search-icon"></i>
+              <input type="text" id="main-search-input" class="nav-search-input" placeholder="Search by name, category, brand, or craft origin..." />
+            </div>
+          <!-- Catalogue Top Category Chips -->
+          <div class="category-pills" id="catalogue-category-pills" style="margin-bottom: 24px;"></div>
+
+          <div class="catalog-layout">
+            <!-- Sidebar Filter -->
+            <aside class="filter-sidebar">
+              <div class="filter-header">
+                <h3 class="filter-title"><i class="fa-solid fa-sliders"></i> Filters</h3>
+                <button class="filter-reset" id="btn-reset-filters">Reset All</button>
+              </div>
+
+              <!-- Categories Filter in Sidebar -->
+              <div class="filter-group">
+                <h4 class="filter-group-title">Categories</h4>
+                <div class="filter-radios" id="sidebar-categories-container" style="gap: 10px;">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
+
+              <!-- Price Filter Slider -->
+              <div class="filter-group">
+                <h4 class="filter-group-title">Max Price</h4>
+                <div class="price-slider-wrap">
+                  <div class="price-range-labels">
+                    <span>₹0</span>
+                    <span id="price-slider-value" style="color: var(--primary);">₹35,000</span>
+                  </div>
+                  <input type="range" id="price-range-slider" class="price-range-slider" min="500" max="35000" step="500" value="35000" />
+                </div>
+              </div>
+
+              <!-- Indian Delivery Perks -->
+              <div class="filter-group">
+                <h4 class="filter-group-title">Special Benefits</h4>
+                <div class="filter-checkboxes">
+                  <label class="filter-label">
+                    <input type="checkbox" checked disabled /> Free Pan-India Shipping (> ₹499)
+                  </label>
+                  <label class="filter-label">
+                    <input type="checkbox" checked disabled /> Cash on Delivery Available
+                  </label>
+                  <label class="filter-label">
+                    <input type="checkbox" checked disabled /> Silk Mark & Lab Certified
+                  </label>
+                </div>
+              </div>
+
+              <div style="padding-top: 14px; border-top: 1px solid var(--border-color);">
+                <button class="btn btn-outline btn-block btn-sm" id="btn-close-mobile-filter" style="display: none;">Apply Filters</button>
+              </div>
+            </aside>
+
+            <!-- Products Content Area -->
+            <div>
+              <!-- Products Toolbar -->
+              <div class="products-toolbar">
+                <span class="products-count-label" id="catalog-count-label">
+                  Loading authentic products...
+                </span>
+                <div class="toolbar-actions">
+                  <button class="btn btn-sm btn-outline mobile-filter-btn" id="btn-mobile-filter-toggle">
+                    <i class="fa-solid fa-filter"></i> Filters
+                  </button>
+                  <select id="catalog-sort-select" class="sort-select">
+                    <option value="newest">Sort: Newest First</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="rating">Customer Rating</option>
+                    <option value="discount">Biggest Discount %</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Products Grid -->
+              <div class="products-grid" id="catalog-products-grid">
+                <!-- Populated dynamically -->
+              </div>
+
+              <!-- Load More Button -->
+              <div style="text-align: center; margin-top: 40px;">
+                <button class="btn btn-outline btn-lg" id="btn-load-more" style="display: none;">
+                  Load More Products <i class="fa-solid fa-angle-down"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. PRODUCT DETAILS VIEW -->
+      <section id="product-details-view" style="display: none;">
+        <!-- Populated by catalog.renderProductDetailPage(id) -->
+      </section>
+
+      <!-- 4. CHECKOUT VIEW -->
+      <section id="checkout-view" style="display: none;">
+        <!-- Populated by checkout.renderCheckoutView() -->
+      </section>
+
+      <!-- 5. ORDERS VIEW -->
+      <section id="orders-view" style="display: none;">
+        <!-- Populated by orders.renderOrdersView() -->
+      </section>
+
+      <!-- 6. PROFILE VIEW -->
+      <section id="profile-view" style="display: none;">
+        <!-- Populated by auth.renderProfileView() -->
+      </section>
+
+      <!-- 7. WISHLIST VIEW -->
+      <section id="wishlist-view" style="display: none;">
+        <!-- Populated by wishlist.renderWishlistView() -->
+      </section>
+
+      <!-- 8. ORDER SUCCESS VIEW -->
+      <section id="order-success-view" style="display: none;">
+        <!-- Populated by checkout.renderOrderSuccessView(id) -->
+      </section>
+
+      <!-- 9. 404 NOT FOUND VIEW -->
+      <section id="not-found-view" style="display: none;">
+        <div class="container" style="padding: 90px 20px; text-align: center;">
+          <h1 style="font-size: 5rem; font-family: var(--font-festive); color: var(--primary); line-height: 1;">404</h1>
+          <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px;">Panna Nahi Mila! (Page Not Found)</h2>
+          <p style="color: var(--text-muted); max-width: 480px; margin: 0 auto 28px;">
+            The page you are looking for does not exist or may have been relocated. Explore our vibrant catalogue of authentic Indian goods.
+          </p>
+          <a href="#home" class="btn btn-primary btn-lg">Return to DesiKart Home</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Col 1: Brand & Made in India -->
+          <div>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+              <div class="brand-symbol"><i class="fa-solid fa-om"></i></div>
+              <span style="font-size: 1.4rem; font-weight: 800; color: #fff;">DesiKart</span>
+            </div>
+            <p style="line-height: 1.7; margin-bottom: 18px;">
+              India’s premier artisanal marketplace connecting master weavers, coppersmiths, Ayurvedic practitioners, and homegrown tech brands with households across Bharat.
+            </p>
+            <div style="font-size: 0.95rem; color: #ffd43b; font-weight: 600;">
+              🇮🇳 Made with ❤ in India for the World
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div>
+            <h4 class="footer-col-title">Shop Heritage</h4>
+            <ul class="footer-links">
+              <li><a href="#products" class="footer-link">Pure Silk Sarees</a></li>
+              <li><a href="#products" class="footer-link">Ayurvedic Wellness</a></li>
+              <li><a href="#products" class="footer-link">Spices & Dry Fruits</a></li>
+              <li><a href="#products" class="footer-link">Brass Urlis & Decor</a></li>
+              <li><a href="#products" class="footer-link">Make In India Gadgets</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Customer Care -->
+          <div>
+            <h4 class="footer-col-title">Customer Care</h4>
+            <ul class="footer-links">
+              <li><a href="#orders" class="footer-link">Track Your Order</a></li>
+              <li><a href="#checkout" class="footer-link">Shipping & Delivery Policies</a></li>
+              <li><a href="#profile" class="footer-link">Easy 7-Day Returns</a></li>
+              <li><span class="footer-link"><i class="fa-solid fa-phone"></i> +91 1800 200 4567</span></li>
+              <li><span class="footer-link"><i class="fa-solid fa-envelope"></i> namaste@desikart.in</span></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Trust Badges & Payments -->
+          <div>
+            <h4 class="footer-col-title">Pan-India Trust</h4>
+            <div class="footer-trust-list">
+              <div class="footer-trust-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>100% Verified Quality Sourcing</span>
+              </div>
+              <div class="footer-trust-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>256-bit Bank Grade Encryption</span>
+              </div>
+              <div class="footer-trust-item">
+                <i class="fa-solid fa-receipt"></i>
+                <span>GST Compliant Tax Invoices</span>
+              </div>
+            </div>
+            <div class="footer-payment-icons">
+              <span class="payment-badge">UPI</span>
+              <span class="payment-badge">RuPay</span>
+              <span class="payment-badge">Visa</span>
+              <span class="payment-badge">Mastercard</span>
+              <span class="payment-badge">Cash on Delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+          <div>
+            © 2026 DesiKart Technologies Pvt. Ltd. All Rights Reserved. GSTIN: 27AABCD1234F1Z8.
+          </div>
+          <div>
+            Serving 19,100+ Postal PIN codes across India from Mumbai Hub & Bengaluru Center.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CART SLIDE-IN DRAWER -->
+    <div id="cart-drawer-backdrop" class="cart-drawer-backdrop">
+      <div class="cart-drawer">
+        <div class="cart-drawer-header">
+          <h3 style="font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-bag-shopping" style="color: var(--primary);"></i> Shopping Bag
+          </h3>
+          <button id="cart-drawer-close" class="modal-close" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-drawer-body" id="cart-items-container">
+          <!-- Populated by cart.renderDrawer() -->
+        </div>
+        <div class="cart-drawer-footer" id="cart-drawer-footer">
+          <!-- Populated by cart.renderDrawer() -->
+        </div>
+      </div>
+    </div>
+
+    <!-- AUTHENTICATION MODAL (LOGIN / REGISTER) -->
+    <div id="auth-modal" class="modal-backdrop">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 class="modal-title" id="auth-modal-title">Sign in to DesiKart</h3>
+          <button class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body">
+          <!-- Tab Navigation -->
+          <div style="display: flex; border-bottom: 1px solid var(--border-color); margin-bottom: 20px;">
+            <button id="auth-tab-login" class="btn btn-outline active" style="flex: 1; border: none; border-bottom: 2px solid var(--primary); border-radius: 0;">Sign In</button>
+            <button id="auth-tab-register" class="btn btn-outline" style="flex: 1; border: none; border-radius: 0;">Register New Account</button>
+          </div>
+
+          <!-- Login Form -->
+          <form id="auth-login-form">
+            <div class="form-group">
+              <label class="form-label required">Email Address</label>
+              <input type="email" id="login-email" class="form-control" placeholder="aarav@desikart.in" value="aarav@desikart.in" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label required">Password</label>
+              <input type="password" id="login-password" class="form-control" placeholder="••••••••" value="Password@123" required />
+              <div class="form-hint">Select demo account:</div>
+              <div style="display: flex; gap: 8px; margin-top: 6px;">
+                <button type="button" class="btn btn-sm btn-outline" id="btn-fill-aarav" style="flex: 1; font-size: 0.78rem;">Aarav (Mumbai)</button>
+                <button type="button" class="btn btn-sm btn-outline" id="btn-fill-priya" style="flex: 1; font-size: 0.78rem;">Priya (Bengaluru)</button>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 10px;">
+              Namaste, Sign In 🙏
+            </button>
+          </form>
+
+          <!-- Register Form -->
+          <form id="auth-register-form" class="hidden">
+            <div class="form-group">
+              <label class="form-label required">Full Name</label>
+              <input type="text" id="reg-name" class="form-control" placeholder="e.g. Sneha Kulkarni" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label required">Email Address</label>
+              <input type="email" id="reg-email" class="form-control" placeholder="name@example.com" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mobile Number (+91)</label>
+              <input type="tel" id="reg-phone" class="form-control" placeholder="9820198201" pattern="[6-9][0-9]{9}" />
+            </div>
+            <div class="form-group">
+              <label class="form-label required">Password (min 6 chars)</label>
+              <input type="password" id="reg-password" class="form-control" placeholder="••••••••" minlength="6" required />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 10px;">
+              Create My Account
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD ADDRESS MODAL -->
+    <div id="address-modal" class="modal-backdrop">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 class="modal-title">Add Indian Delivery Address</h3>
+          <button class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body">
+          <form id="modal-address-form">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div class="form-group">
+                <label class="form-label required">Full Name</label>
+                <input type="text" id="m-addr-name" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label required">Mobile (+91)</label>
+                <input type="tel" id="m-addr-phone" class="form-control" pattern="[6-9][0-9]{9}" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label required">Street / House No. / Landmark</label>
+              <input type="text" id="m-addr-street" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Landmark (Optional)</label>
+              <input type="text" id="m-addr-landmark" class="form-control" />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+              <div class="form-group">
+                <label class="form-label required">PIN Code</label>
+                <input type="text" id="m-addr-pin" class="form-control" maxlength="6" pattern="[1-9][0-9]{5}" placeholder="400001" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label required">City</label>
+                <input type="text" id="m-addr-city" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label required">State</label>
+                <select id="addr-state-select" class="form-control" required>
+                  <option value="">Select State</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Type</label>
+              <div style="display: flex; gap: 14px;">
+                <label><input type="radio" name="m-addr-type" value="Home" checked /> Home</label>
+                <label><input type="radio" name="m-addr-type" value="Work" /> Work</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label><input type="checkbox" id="m-addr-default" /> Set as Default Address</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Save Address</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK VIEW MODAL -->
+    <div id="quick-view-modal" class="modal-backdrop">
+      <div class="modal-container modal-lg">
+        <div class="modal-header">
+          <h3 class="modal-title">Product Preview</h3>
+          <button class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body" id="quick-view-modal-body">
+          <!-- Populated by catalog.openQuickView() -->
+        </div>
+      </div>
+    </div>
+
+    <!-- RECEIPT MODAL -->
+    <div id="receipt-modal" class="modal-backdrop">
+      <div class="modal-container modal-lg">
+        <div class="modal-header">
+          <h3 class="modal-title">Tax Invoice / Receipt</h3>
+          <button class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body" id="receipt-modal-body">
+          <!-- Populated by orders.showReceiptModal() -->
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <div class="mobile-drawer-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div class="brand-symbol"><i class="fa-solid fa-om"></i></div>
+            <strong>DesiKart</strong>
+          </div>
+          <button id="btn-close-mobile-drawer" class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
+          <li><a href="#home" class="nav-link" style="font-size: 1.1rem;"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="#products" class="nav-link" style="font-size: 1.1rem;"><i class="fa-solid fa-store"></i> Full Catalogue</a></li>
+          <li><a href="#wishlist" class="nav-link" style="font-size: 1.1rem;"><i class="fa-solid fa-heart"></i> My Wishlist</a></li>
+          <li><a href="#orders" class="nav-link" style="font-size: 1.1rem;"><i class="fa-solid fa-box"></i> My Orders</a></li>
+          <li><a href="#profile" class="nav-link" style="font-size: 1.1rem;"><i class="fa-solid fa-user"></i> My Profile</a></li>
+        </ul>
+        <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: var(--text-muted);">
+          Pan-India Delivery Hotline: <strong>+91 1800 200 4567</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container"></div>
+
+    <!-- CDN Libraries: Canvas Confetti for celebrations -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <!-- Vanilla ES6+ Modular Application Code -->
+    <script type="module" src="/client/js/app.js"></script>
+  </body>
+</html>

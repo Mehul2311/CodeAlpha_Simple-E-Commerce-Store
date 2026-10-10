@@ -1,0 +1,8 @@
+{
+  "name": "DesiKart - Authentic Indian E-Commerce",
+  "description": "Experience the vibrance of India with DesiKart: festive ethnic wear, Ayurvedic wellness, handicrafts, spices, electronics, and authentic Indian products delivered Pan-India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
