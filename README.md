@@ -54,8 +54,8 @@ If your device is set to reduce motion, the animations tone down automatically.
 You'll need Node.js 22.12 or newer and a MongoDB database. A free MongoDB Atlas cluster is enough.
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/Mehul2311/CodeAlpha_Simple-E-Commerce-Store.git
+cd CodeAlpha_Simple-E-Commerce-Store
 npm install
 ```
 
@@ -101,6 +101,6 @@ server/    models, routes, controllers, middleware, config and the seed script
 
 ## Author
 
-Mehul Sharma, Computing Technologies student at SRM Institute of Science and Technology.
+Mehul Sharma, Computer Science student at SRM Institute of Science and Technology.
 
 GitHub: https://github.com/Mehul2311
